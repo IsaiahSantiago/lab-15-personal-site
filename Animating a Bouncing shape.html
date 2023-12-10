@@ -6,52 +6,18 @@
     <title>The_Rival Social Tree</title>    </head>
     <link rel="stylesheet" href="style.css"> <!--Can use multiple CSS codes for each page too-->
 <!-- Try to find the ghost clancy font and a readable comic sans font -->
-<body1 onload="main()">
+<body onload="main()">
 
-	<canvas id="sketch" width="300" height="10"> 
+	<canvas id="sketch" width="1000" height="1000"> 
         
     </canvas>
-</body1>
 
-<body>
-
-    <div class="hero-image">
-        <div class="hero-text">
-            <h1> Welcome to Isaiah's Webpage!</h1>
-            <h5>I'm a college student</h5>
-        </div>
-    </div>
-
-    <div id="navbar">   
-        <a href="index.html">Home page</a>
-
-        <a href="aboutme.html">About Me</a>
-
-        <a href="myportfolio.html">My Portfolio</a>
-
-        <a href="contact.html">Contact</a>
-        
-    </div>
-
-<div class="stuff" id="First">
-<!-- Text goes here/Other things -->
-</div>
-
-<div class="stuff" id="something"> 
-<!-- Text goes here/Other things too -->
-</div>
-
-<!-- ///////////////////////////////ART STUFF///////////////////////////////////// -->
-<script1 src="navbar.v01.js"> 
-    </script1>
-    <script>
-// Animated drawing, Maybe you can search an example
+<script> 
 document.addEventListener('DOMContentLoaded', main);
-
 
 var sketch;
 var context;
-var rectangle = {'x':200, 'y':-5, 'w':20, 'h':100};
+var rectangle = {'x':883, 'y':100, 'w':120, 'h':40};
 var dx = 3;
 var fps = 10;
 
@@ -70,12 +36,14 @@ function animate() {
 
     if (rectangle.x > sketch.offsetWidth - rectangle.w - dx) {
 		dx = dx * -1;
-		rectangle.x = offsetWidth;
+		rectangle.x = offsetWidth.x;
 	} else if (rectangle.x < 0 + dx) {
 		dx = dx * -1;
 		rectangle.x = 0;
 	}
 }
+
+
 </script>
 
 </body>
