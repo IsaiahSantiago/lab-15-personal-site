@@ -1,4 +1,7 @@
 /* universal properties  */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap'); 
+
  body, html { 
     height: 100%;    
     font-family: 'Dosis', sans-serif; 
@@ -8,11 +11,11 @@
  } 
 
     .hero-image { 
-    background-image: url("a1dc8307-bbde-4cd7-adc1-3f7834e2ceb2-profile_image-300x300");
+    background-image: url("a1dc8307-bbde-4cd7-adc1-3f7834e2ceb2-profile_image-300x300.png");
     height: 30%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover, contain;
     position: relative; 
 }
 center the text over the image 
@@ -24,19 +27,19 @@ center the text over the image
     transform: translate(-50%, -50%);
     color: white;
 }
-/*  
+  
 div.stuff {
     width: 250px;
     word-wrap: break-word;
     overflow: auto;
     text-align: left;
     border-width: 1px;
-    border-style: dotted;
+    border-style: double;
     border-color: black;
-    float: left;
+    float: center;
     margin: 10px;
     padding: 5px;
-}  */
+}  
 /* Can manipulate several HTML elements this way */
 /* div#First {
     background-color: #40352C;
@@ -60,46 +63,80 @@ div#Fifth {
 /*  */
 /* h1, h2, h3, h4, h5 {
 font-family: 'Major Mono Display', monospace;
-
-} */
-
-/* Style the navbar */
-/* #navbar{
-    overflow: hidden;
-    background-color: #260A03;
-
+/*  */
+          
+.nav {
+position: relative;
+background-color: #fff;
+padding: 20px;
+transition: 0.5s;
+border-radius: 50px;
+overflow: hidden;
+box-shadow: 0 8px 15px rgba(0,0,0,.2);
 }
 
-#navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    font-family: 'Major Mono Display', monospace;
-    text-align: center;
-    padding: 14px;
-    text-decoration: none;
-} */
-/* 
-#navbar a:hover {
-    color: hotpink;
-    background-color: white;
-} */
+.menu {
+margin: 0;
+padding: 0;
+width: 0;
+overflow: hidden;
+transition: 0.5s;
+}
 
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-/* .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-   */
-  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-  /* .sticky + .content {
-    padding-top: 60px;
-  } */
+.nav input:checked ~ .menu {
+width: 450px;
+}
 
-  
+.menu li {
+list-style: none;
+margin: 0 10px;
+}
 
+.menu li a {
+text-decoration: none;
+color: #666;
+text-transform: uppercase;
+font-weight: 600;
+transition: 0.5s;
+}
 
+.menu li a:hover {
+color: #161919;
+}
 
+.nav input {
+width: 40px;
+height: 40px;
+cursor: pointer;
+opacity: 0;
+}
 
+.nav span {
+position: absolute;
+left: 30px;
+width: 30px;
+height: 4px;
+border-radius: 50px;
+background-color: #666;
+pointer-events: none;
+transition: 0.5s;
+}
 
+.nav input:checked ~ span {
+background-color: #f974a1;
+}
+
+.nav span:nth-child(2) {
+transform: translateY(-8px);
+}
+
+.nav input:checked ~ span:nth-child(2) {
+transform: translateY(0) rotate(-45deg);
+}
+.nav span:nth-child(3) {
+transform: translateY(8px);
+}
+
+.nav input:checked ~ span:nth-child(3) {
+transform: translateY(0) rotate(45deg);
+}

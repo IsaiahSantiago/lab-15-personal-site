@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The_Rival Social Tree</title>    </head>
     <link rel="stylesheet" href="style.css"> <!--Can use multiple CSS codes for each page too-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font library/Dark mode -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 <!-- Try to find the ghost clancy font and a readable comic sans font -->
+
 <body1 onload="main()">
 
 	<canvas id="sketch" width="300" height="10"> 
@@ -34,7 +38,9 @@
     </div>
 
 <div class="stuff" id="First">
-<!-- Text goes here/Other things -->
+
+
+
 </div>
 
 <div class="stuff" id="something"> 
@@ -61,6 +67,20 @@ function main() {
 	setInterval(animate, fps);
 }
 
+function draw_circle(context, x, y, r) {
+	context.beginPath();
+	context.arc(x, y, r, 0, 2 * Math.PI, true);
+	context.closePath();
+	context.fill();
+
+}
+
+function draw_moon(context, x, y, r) {
+	draw_circle(context, x, y, r)
+	context.fillStyle =	"#ffffff";
+	draw_circle(context, x + 50, y + 50, r)
+}
+
 function animate() {
     context.fillStyle = "#0000ff"
 	context.clearRect(0, 0, sketch.offsetWidth, sketch.offsetHeight);
@@ -76,8 +96,19 @@ function animate() {
 		rectangle.x = 0;
 	}
 }
+
+
+
 </script>
 
 </body>
 
-</html>
+
+
+
+  <main>
+    <button class="toggle-mode js-toggle-mode"><i class="fa fa-moon-o fa-2x" aria-hidden="true"></i></buton>
+</main>
+
+
+</html><a target='_blank' href='https://www.javascriptfreecode.com' style='font-size: 8pt; text-decoration: none'>JavaScript Best Codes</a>           
