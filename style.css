@@ -4,10 +4,9 @@
 
  body, html { 
     height: 100%;    
-    font-family: 'Dosis', sans-serif;
-    font-family: 'Major Mono Display', monospace;
-    font-family: 'Permanent Marker', cursive;
-    font-family: 'Silkscreen', sans-serif;    Font-weight: 200;
+    font-family: 'Permanent Marker', 'cursive';
+    font-family: 'Silkscreen', sans-serif;    
+    Font-weight: 400;
     color: white; 
  } 
 
@@ -61,13 +60,17 @@ div#Fourth {
 div#Fifth {
     background-color: #BF6060;
 } */
-/*  */
+/* h1 to h5 headers will be pixelated */
 h1, h2, h3, h4, h5 {
-    font-family: 'Dosis', sans-serif;
-    font-family: 'Major Mono Display', monospace;
-    font-family: 'Permanent Marker', cursive;
-    font-family: 'Silkscreen', sans-serif;} 
-          
+    font-family: 'Silkscreen', sans-serif;
+
+} 
+
+p {
+    font-family: 'Permanent Marker', 'cursive';
+
+}
+
 /* Style the navbar */
 #navbar{
     overflow: hidden;
@@ -261,4 +264,3 @@ transform: translateY(0) rotate(45deg);
     .p-layer2 h2{
     text-align: center;
     }
-
