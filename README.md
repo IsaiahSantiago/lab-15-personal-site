@@ -1,5 +1,6 @@
 # lab-15-personal-site
 Cod snippits here:
+file:///c%3A/Users/Isaiah/Documents/My%20Classwork/lab-15-personal-site/index.html
 <!-- this script is provided by https://www.javascriptfreecode.com coded by: Kerixa Inc. -->
 <!-- <style>
 body {
